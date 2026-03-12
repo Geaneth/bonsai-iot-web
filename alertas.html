@@ -1,0 +1,176 @@
+<!DOCTYPE html>
+<html lang="es">
+
+<head>
+<meta charset="UTF-8">
+<title>Alertas</title>
+<link rel="stylesheet" href="dashboard/dashboard.css">
+</head>
+
+<body>
+
+<div class="layout">
+
+<!-- SIDEBAR -->
+<div class="sidebar">
+
+<h2>🌱 Bonsái Monitor</h2>
+
+<ul>
+<li><a href="dashboard.html">Panel principal</a></li>
+<li><a href="#">Telemetría</a></li>
+<li><a href="#">Riego</a></li>
+<li><a href="#">Movimiento/Cámara</a></li>
+<li><a href="#">Registro histórico</a></li>
+<li><a href="#">Visualización histórica</a></li>
+<li><a href="parametros.html">Parámetros</a></li>
+<li class="active"><a href="alertas.html">Alertas</a></li>
+<li><a href="#">Reportes</a></li>
+</ul>
+
+</div>
+
+
+<!-- CONTENIDO -->
+<div class="main">
+
+<!-- TOPBAR -->
+<div class="topbar">
+
+<input placeholder="🔎 Buscar dispositivo, alerta o reporte...">
+<button onclick="refrescar()">Refrescar datos</button>
+
+</div>
+
+
+<div class="grid-alertas">
+
+<!-- LISTA -->
+<div class="card">
+
+<h2>Centro de alertas</h2>
+
+<div class="alerta">
+
+<div>
+<b>Humedad baja</b><br>
+12/3/2026, 1:48:46 a. m. — Umbral inferior detectado
+</div>
+
+<button onclick="verAlerta('Humedad baja','28% en bonsái #12, se sugirió riego.')">Ver</button>
+
+</div>
+
+
+<div class="alerta">
+
+<div>
+<b>Movimiento detectado</b><br>
+12/3/2026, 1:36:03 a. m. — PIR-Front activado: revisar cámara.
+</div>
+
+<button onclick="verAlerta('Movimiento detectado','Sensor PIR activado en cámara frontal.')">Ver</button>
+
+</div>
+
+
+<div class="alerta">
+
+<div>
+<b>Movimiento detectado</b><br>
+12/3/2026, 1:36:00 a. m. — PIR-Front activado: revisar cámara.
+</div>
+
+<button onclick="verAlerta('Movimiento detectado','Sensor PIR activado.')">Ver</button>
+
+</div>
+
+
+<div class="alerta">
+
+<div>
+<b>Humedad baja</b><br>
+2025-10-26 22:41 — Sustrato: 28%
+</div>
+
+<button onclick="verAlerta('Humedad baja','Sustrato con 28% de humedad.')">Ver</button>
+
+</div>
+
+
+<br>
+
+<button onclick="simular()">Simular alerta</button>
+
+</div>
+
+
+<!-- DETALLE -->
+<div class="card">
+
+<h2>Detalle</h2>
+
+<div id="detalleBox">
+
+<p>Selecciona una alerta para ver el detalle</p>
+
+</div>
+
+</div>
+
+</div>
+
+</div>
+
+</div>
+
+
+<script>
+
+function verAlerta(titulo,descripcion){
+
+document.getElementById("detalleBox").innerHTML = `
+<h3>${titulo}</h3>
+<p>${descripcion}</p>
+
+<button onclick="resolver()">Marcar como resuelta</button>
+<button onclick="cerrarDetalle()">Cerrar</button>
+`
+
+}
+
+
+function cerrarDetalle(){
+
+document.getElementById("detalleBox").innerHTML =
+"<p>Selecciona una alerta para ver el detalle</p>"
+
+}
+
+
+function resolver(){
+
+alert("Alerta marcada como resuelta")
+
+cerrarDetalle()
+
+}
+
+
+function simular(){
+
+alert("⚠ Nueva alerta simulada")
+
+}
+
+
+function refrescar(){
+
+location.reload()
+
+}
+
+</script>
+
+</body>
+</html>
