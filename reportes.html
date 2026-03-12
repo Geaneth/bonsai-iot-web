@@ -1,0 +1,124 @@
+<!DOCTYPE html>
+<html lang="es">
+
+<head>
+
+<meta charset="UTF-8">
+<title>Reportes</title>
+<link rel="stylesheet" href="dashboard/dashboard.css">
+
+</head>
+
+<body>
+
+<div class="layout">
+
+<!-- SIDEBAR -->
+
+<div class="sidebar">
+
+<h2>🌱 Bonsái Monitor</h2>
+
+<ul>
+
+<li><a href="dashboard.html">Panel principal</a></li>
+<li><a href="#">Telemetría</a></li>
+<li><a href="#">Riego</a></li>
+<li><a href="#">Movimiento/Cámara</a></li>
+<li><a href="#">Registro histórico</a></li>
+<li><a href="#">Visualización histórica</a></li>
+<li><a href="parametros.html">Parámetros</a></li>
+<li><a href="alertas.html">Alertas</a></li>
+<li class="active"><a href="reportes.html">Reportes</a></li>
+
+</ul>
+
+</div>
+
+<!-- CONTENIDO -->
+
+<div class="main">
+
+<!-- TOPBAR -->
+
+<div class="topbar">
+
+<input placeholder="🔎 Buscar dispositivo, alerta o reporte...">
+<button onclick="refrescar()">Refrescar datos</button>
+
+</div>
+
+<!-- CARD -->
+
+<div class="card">
+
+<h2>Generación de reportes (PDF)</h2>
+
+<div class="report-grid">
+
+<div>
+
+<label>Rango — Desde</label>
+<input type="date" id="desde">
+
+</div>
+
+<div>
+
+<label>Rango — Hasta</label>
+<input type="date" id="hasta">
+
+</div>
+
+<div>
+
+<label>Contenido</label>
+
+<select id="contenido">
+
+<option>Métricas y eventos</option>
+<option>Solo métricas</option>
+<option>Solo alertas</option>
+
+</select>
+
+</div>
+
+</div>
+
+<br>
+
+<button onclick="generarPDF()">Generar PDF</button>
+
+</div>
+
+</div>
+
+</div>
+
+<script>
+
+function generarPDF(){
+
+let desde = document.getElementById("desde").value
+let hasta = document.getElementById("hasta").value
+let contenido = document.getElementById("contenido").value
+
+if(desde === "" || hasta === ""){
+alert("Selecciona un rango de fechas")
+return
+}
+
+alert("Generando reporte PDF\n\nDesde: "+desde+"\nHasta: "+hasta+"\nContenido: "+contenido)
+
+}
+
+function refrescar(){
+location.reload()
+}
+
+</script>
+
+</body>
+
+</html>

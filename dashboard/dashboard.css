@@ -298,3 +298,26 @@ border-bottom:1px solid #ddd;
 padding:5px 12px;
 
 }
+.report-grid{
+
+display:grid;
+grid-template-columns:1fr 1fr 1fr;
+
+gap:20px;
+
+margin-top:20px;
+
+}
+
+.report-grid input,
+.report-grid select{
+
+width:100%;
+padding:10px;
+
+border-radius:8px;
+border:1px solid #ccc;
+
+margin-top:5px;
+
+}
