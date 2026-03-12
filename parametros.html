@@ -1,0 +1,129 @@
+<!DOCTYPE html>
+<html lang="es">
+
+<head>
+
+<meta charset="UTF-8">
+<title>Parámetros</title>
+
+<link rel="stylesheet" href="dashboard/dashboard.css">
+
+</head>
+
+<body>
+
+<div class="layout">
+
+<!-- SIDEBAR -->
+
+<div class="sidebar">
+
+<h2>🌱 Bonsái Monitor</h2>
+
+<ul>
+
+<li><a href="dashboard.html">Panel principal</a></li>
+<li><a href="telemetria.html">Telemetría</a></li>
+<li><a href="riego.html">Riego</a></li>
+<li><a href="camara.html">Movimiento/Cámara</a></li>
+<li><a href="registro.html">Registro histórico</a></li>
+<li><a href="visualizacion.html">Visualización histórica</a></li>
+<li class="active"><a href="parametros.html">Parámetros</a></li>
+<li><a href="#">Alertas</a></li>
+<li><a href="#">Reportes</a></li>
+
+</ul>
+
+</div>
+
+<!-- CONTENIDO -->
+
+<div class="main">
+
+<!-- TOPBAR -->
+
+<div class="topbar">
+
+<input placeholder="🔎 Buscar dispositivo, alerta o reporte...">
+
+<button onclick="actualizar()">Refrescar datos</button>
+
+</div>
+
+
+<!-- CARD -->
+
+<div class="card">
+
+<h2>Parámetros del sistema</h2>
+
+
+<div class="param-grid">
+
+<div>
+
+<label>Umbral de humedad (%)</label>
+<input type="number" value="40">
+
+</div>
+
+
+<div>
+
+<label>Ventana de riego — Inicio</label>
+<input type="time" value="06:00">
+
+</div>
+
+
+<div>
+
+<label>Ventana de riego — Fin</label>
+<input type="time" value="18:00">
+
+</div>
+
+
+<div>
+
+<label>Duración máx. de riego (seg)</label>
+<input type="number" value="45">
+
+</div>
+
+
+<div>
+
+<label>Período de enfriamiento (min)</label>
+<input type="number" value="15">
+
+</div>
+
+
+</div>
+
+
+<br>
+
+<button onclick="guardar()">Guardar cambios</button>
+
+</div>
+
+</div>
+
+</div>
+
+
+<script>
+
+function guardar(){
+
+alert("Parámetros guardados (simulación)")
+
+}
+
+</script>
+
+</body>
+
+</html>
