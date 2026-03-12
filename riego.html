@@ -1,0 +1,122 @@
+<!DOCTYPE html>
+<html lang="es">
+
+<head>
+<meta charset="UTF-8">
+<title>Riego</title>
+
+<link rel="stylesheet" href="dashboard/dashboard.css">
+
+</head>
+
+<body>
+
+<div class="layout">
+
+<!-- SIDEBAR -->
+
+<div class="sidebar">
+
+<h2>🌱 Bonsái Monitor</h2>
+
+<ul>
+
+<li><a href="dashboard.html">Panel principal</a></li>
+<li><a href="telemetria.html">Telemetría</a></li>
+<li class="active"><a href="riego.html">Riego</a></li>
+<li><a href="#">Movimiento/Cámara</a></li>
+<li><a href="#">Registro histórico</a></li>
+<li><a href="#">Visualización histórica</a></li>
+<li><a href="#">Parámetros</a></li>
+<li><a href="#">Alertas</a></li>
+<li><a href="#">Reportes</a></li>
+
+</ul>
+
+</div>
+
+
+<!-- CONTENIDO -->
+
+<div class="main">
+
+<!-- TOPBAR -->
+
+<div class="topbar">
+
+<input placeholder="🔎 Buscar dispositivo, alerta o reporte...">
+
+<button onclick="actualizar()">Refrescar datos</button>
+
+</div>
+
+
+<!-- GRID -->
+
+<div class="grid">
+
+
+<!-- ESTADO RIEGO -->
+
+<div class="card">
+
+<h2>Estado del riego</h2>
+
+<p>Actual: <span class="estado">Inactivo</span></p>
+
+<p>Último inicio: —</p>
+
+<p>Última duración: —</p>
+
+<button onclick="regar()">Regar ahora</button>
+
+<p class="nota">
+* Demostración: este botón solo simula el cambio de estado.
+</p>
+
+</div>
+
+
+<!-- BITACORA -->
+
+<div class="card">
+
+<h2>Bitácora de riego</h2>
+
+<div class="bitacora">
+
+<div class="item">
+<span>2025-10-27 12:15</span>
+<span class="tag">Manual · 15 s</span>
+</div>
+
+<div class="item">
+<span>2025-10-27 06:32</span>
+<span class="tag">Auto · 24 s</span>
+</div>
+
+</div>
+
+</div>
+
+</div>
+
+</div>
+
+</div>
+
+<script src="js/app.js"></script>
+
+<script>
+
+function regar(){
+
+alert("Sistema de riego activado (simulación)")
+
+}
+
+</script>
+
+</body>
+
+</html>
