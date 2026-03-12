@@ -103,3 +103,35 @@ border-radius:12px;
 width:100%;
 border-radius:10px;
 }
+
+.sidebar a{
+text-decoration:none;
+color:inherit;
+display:block;
+width:100%;
+}
+.card{
+background:white;
+padding:25px;
+border-radius:12px;
+box-shadow:0 2px 8px rgba(0,0,0,0.05);
+}
+
+.tabla{
+width:100%;
+border-collapse:collapse;
+margin-top:15px;
+}
+
+.tabla th{
+text-align:left;
+padding:12px;
+font-size:14px;
+border-bottom:1px solid #ddd;
+color:#555;
+}
+
+.tabla td{
+padding:12px;
+border-bottom:1px solid #eee;
+}

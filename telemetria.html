@@ -1,0 +1,107 @@
+<!DOCTYPE html>
+<html lang="es">
+
+<head>
+
+<meta charset="UTF-8">
+<title>Telemetría</title>
+
+<link rel="stylesheet" href="dashboard/dashboard.css">
+
+</head>
+
+<body>
+
+<div class="layout">
+
+<!-- SIDEBAR -->
+
+<div class="sidebar">
+
+<h2>🌱 Bonsái Monitor</h2>
+
+<ul>
+
+<li><a href="dashboard.html">Panel principal</a></li>
+<li class="active"><a href="telemetria.html">Telemetría</a></li>
+<li><a href="riego.html">Riego</a></li>
+<li><a href="camara.html">Movimiento / Cámara</a></li>
+<li><a href="registro.html">Registro histórico</a></li>
+<li><a href="visualizacion.html">Visualización histórica</a></li>
+<li><a href="parametros.html">Parámetros</a></li>
+<li><a href="alertas.html">Alertas</a></li>
+<li><a href="reportes.html">Reportes</a></li>
+
+</ul>
+
+</div>
+
+
+<!-- CONTENIDO -->
+
+<div class="main">
+
+<!-- TOPBAR -->
+
+<div class="topbar">
+
+<input placeholder="Buscar dispositivo, alerta o reporte...">
+
+<button onclick="actualizar()">Refrescar datos</button>
+
+</div>
+
+
+<!-- TARJETA TELEMETRIA -->
+
+<div class="card">
+
+<h2>Telemetría entrante (MQTT → Plataforma)</h2>
+
+<table class="tabla">
+
+<thead>
+
+<tr>
+<th>FECHA/HORA</th>
+<th>DISPOSITIVO</th>
+<th>TIPO</th>
+<th>VALOR</th>
+<th>ESTADO</th>
+</tr>
+
+</thead>
+
+<tbody>
+
+<tr>
+<td>12/3/2026, 1:22:59 a. m.</td>
+<td>ESP32-01</td>
+<td>Humedad</td>
+<td>43 %</td>
+<td>OK</td>
+</tr>
+
+<tr>
+<td>12/3/2026, 1:22:59 a. m.</td>
+<td>ESP32-01</td>
+<td>Temp</td>
+<td>23.4 °C</td>
+<td>OK</td>
+</tr>
+
+</tbody>
+
+</table>
+
+</div>
+
+</div>
+
+</div>
+
+<script src="js/app.js"></script>
+
+</body>
+
+</html>
