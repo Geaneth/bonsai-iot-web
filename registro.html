@@ -1,0 +1,159 @@
+<!DOCTYPE html>
+<html lang="es">
+
+<head>
+
+<meta charset="UTF-8">
+<title>Registro histórico</title>
+
+<link rel="stylesheet" href="dashboard/dashboard.css">
+
+</head>
+
+<body>
+
+<div class="layout">
+
+<!-- SIDEBAR -->
+
+<div class="sidebar">
+
+<h2>🌱 Bonsái Monitor</h2>
+
+<ul>
+
+<li><a href="dashboard.html">Panel principal</a></li>
+<li><a href="telemetria.html">Telemetría</a></li>
+<li><a href="riego.html">Riego</a></li>
+<li><a href="camara.html">Movimiento/Cámara</a></li>
+<li class="active"><a href="registro.html">Registro histórico</a></li>
+<li><a href="#">Visualización histórica</a></li>
+<li><a href="#">Parámetros</a></li>
+<li><a href="#">Alertas</a></li>
+<li><a href="#">Reportes</a></li>
+
+</ul>
+
+</div>
+
+
+<!-- CONTENIDO -->
+
+<div class="main">
+
+<!-- TOPBAR -->
+
+<div class="topbar">
+
+<input placeholder="🔎 Buscar dispositivo, alerta o reporte...">
+
+<button onclick="actualizar()">Refrescar datos</button>
+
+</div>
+
+
+<!-- CARD -->
+
+<div class="card">
+
+<h2>Registro histórico (AWS Timestream)</h2>
+
+
+<!-- FILTROS -->
+
+<div class="filtros">
+
+<div>
+<label>Desde</label><br>
+<input type="datetime-local">
+</div>
+
+<div>
+<label>Hasta</label><br>
+<input type="datetime-local">
+</div>
+
+<div>
+<label>Tipo</label><br>
+
+<select>
+
+<option>Humedad de sustrato</option>
+<option>Temperatura</option>
+<option>Movimiento</option>
+
+</select>
+
+</div>
+
+<div class="boton">
+
+<button onclick="consultar()">Consultar</button>
+
+</div>
+
+</div>
+
+
+<!-- TABLA -->
+
+<table class="tabla">
+
+<thead>
+
+<tr>
+<th>FECHA/HORA</th>
+<th>MÉTRICA</th>
+<th>VALOR</th>
+<th>FUENTE</th>
+</tr>
+
+</thead>
+
+<tbody>
+
+<tr>
+<td>2025-10-27 18:42</td>
+<td>Humedad</td>
+<td>44 %</td>
+<td>ESP32-01</td>
+</tr>
+
+<tr>
+<td>2025-10-27 18:39</td>
+<td>Temp</td>
+<td>23.1 °C</td>
+<td>ESP32-01</td>
+</tr>
+
+<tr>
+<td>2025-10-27 18:35</td>
+<td>Movimiento</td>
+<td>ON</td>
+<td>PIR-Front</td>
+</tr>
+
+</tbody>
+
+</table>
+
+</div>
+
+</div>
+
+</div>
+
+
+<script>
+
+function consultar(){
+
+alert("Consulta realizada (simulación)")
+
+}
+
+</script>
+
+</body>
+
+</html>
