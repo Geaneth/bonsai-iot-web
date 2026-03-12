@@ -1,0 +1,159 @@
+<!DOCTYPE html>
+<html lang="es">
+
+<head>
+
+<meta charset="UTF-8">
+<title>Visualización histórica</title>
+
+<link rel="stylesheet" href="dashboard/dashboard.css">
+
+<script src="https://cdn.jsdelivr.net/npm/chart.js"></script>
+
+</head>
+
+<body>
+
+<div class="layout">
+
+<!-- SIDEBAR -->
+
+<div class="sidebar">
+
+<h2>🌱 Bonsái Monitor</h2>
+
+<ul>
+
+<li><a href="dashboard.html">Panel principal</a></li>
+<li><a href="telemetria.html">Telemetría</a></li>
+<li><a href="riego.html">Riego</a></li>
+<li><a href="camara.html">Movimiento/Cámara</a></li>
+<li><a href="registro.html">Registro histórico</a></li>
+<li class="active"><a href="visualizacion.html">Visualización histórica</a></li>
+<li><a href="#">Parámetros</a></li>
+<li><a href="#">Alertas</a></li>
+<li><a href="#">Reportes</a></li>
+
+</ul>
+
+</div>
+
+<!-- CONTENIDO -->
+
+<div class="main">
+
+<!-- TOPBAR -->
+
+<div class="topbar">
+
+<input placeholder="🔎 Buscar dispositivo, alerta o reporte...">
+
+<button onclick="actualizar()">Refrescar datos</button>
+
+</div>
+
+
+<div class="grid">
+
+<!-- GRAFICO -->
+
+<div class="card">
+
+<h2>Gráfico histórico (Humedad)</h2>
+
+<div class="grafico">
+
+<canvas id="graficoHumedad"></canvas>
+
+</div>
+
+</div>
+
+
+<!-- EXPORTAR -->
+
+<div class="card">
+
+<h2>Exportar</h2>
+
+<p>CSV de humedad</p>
+<button onclick="exportarCSV()">Exportar CSV</button>
+
+<br><br>
+
+<p>Imagen del panel</p>
+<button onclick="exportarPNG()">Exportar PNG</button>
+
+</div>
+
+</div>
+
+</div>
+
+</div>
+
+
+<script>
+
+const ctx = document.getElementById('graficoHumedad');
+
+new Chart(ctx, {
+
+type: 'line',
+
+data: {
+
+labels: [
+'12:00','13:00','14:00','15:00','16:00','17:00','18:00'
+],
+
+datasets: [{
+
+label: 'Humedad',
+
+data: [40,42,45,43,47,46,48],
+
+borderColor: 'rgb(75, 192, 192)',
+
+tension: 0.4
+
+}]
+
+},
+
+options: {
+
+responsive: true
+
+}
+
+});
+
+
+
+function exportarCSV(){
+
+alert("Exportando CSV (simulación)")
+
+}
+
+
+function exportarPNG(){
+
+const canvas = document.getElementById("graficoHumedad")
+
+const link = document.createElement("a")
+
+link.download = "grafico.png"
+
+link.href = canvas.toDataURL()
+
+link.click()
+
+}
+
+</script>
+
+</body>
+
+</html>

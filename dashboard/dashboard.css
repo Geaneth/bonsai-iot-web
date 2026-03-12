@@ -242,3 +242,9 @@ border:1px solid #ccc;
 .boton button{
 padding:10px 20px;
 }
+.grafico{
+margin-top:20px;
+padding:20px;
+border:2px dashed #cfe3d4;
+border-radius:12px;
+}
