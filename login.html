@@ -1,5 +1,6 @@
 <!DOCTYPE html>
 <html lang="es">
+
 <head>
 
 <meta charset="UTF-8">
@@ -70,25 +71,16 @@ riegos y revisar alertas.
 </p>
 
 <label>Correo electrónico</label>
-<input type="email" placeholder="tucorreo@dominio.com">
+
+<input type="email" id="email" placeholder="admin@bonsai.com">
 
 <label>Contraseña</label>
 
 <div class="password">
 
-<input type="password" placeholder="••••••••">
-<button class="show">Mostrar</button>
+<input type="password" id="password" placeholder="1234">
 
-</div>
-
-<div class="options">
-
-<label>
-<input type="checkbox">
-Recordarme
-</label>
-
-<a href="#">¿Olvidaste tu contraseña?</a>
+<button type="button" class="show" onclick="mostrarPassword()">Mostrar</button>
 
 </div>
 
@@ -100,26 +92,7 @@ Recordarme
 
 </div>
 
+<script src="js/app.js"></script>
+
 </body>
 </html>
-<script>
-
-function login(){
-
-let email = document.querySelector("input[type=email]").value
-let pass = document.querySelector("input[type=password]").value
-
-if(email === "admin@bonsai.com" && pass === "1234"){
-
-window.location.href = "dashboard.html"
-
-}
-else{
-
-alert("Usuario o contraseña incorrectos")
-
-}
-
-}
-
-</script>

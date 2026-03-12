@@ -4,31 +4,109 @@
 <head>
 
 <meta charset="UTF-8">
-<title>Dashboard Bonsái</title>
+<title>Panel Bonsái</title>
 
-<style>
-
-body{
-background:#02261d;
-color:white;
-font-family:Segoe UI;
-display:flex;
-justify-content:center;
-align-items:center;
-height:100vh;
-}
-
-h1{
-font-size:40px;
-}
-
-</style>
+<link rel="stylesheet" href="dashboard/dashboard.css">
 
 </head>
 
 <body>
 
-<h1>🌱 Dashboard Bonsái Monitor</h1>
+<div class="layout">
+
+<!-- SIDEBAR -->
+
+<div class="sidebar">
+
+<h2>🌱 Bonsái Monitor</h2>
+
+<ul>
+
+<li class="active">Panel principal</li>
+<li>Telemetría</li>
+<li>Riego</li>
+<li>Movimiento / Cámara</li>
+<li>Registro histórico</li>
+<li>Visualización histórica</li>
+<li>Parámetros</li>
+<li>Alertas</li>
+<li>Reportes</li>
+
+</ul>
+
+</div>
+
+<!-- CONTENIDO -->
+
+<div class="main">
+
+<!-- TOPBAR -->
+
+<div class="topbar">
+
+<input placeholder="Buscar dispositivo, alerta o reporte...">
+
+<button onclick="actualizar()">Refrescar datos</button>
+
+</div>
+
+
+<!-- TARJETAS -->
+
+<div class="cards">
+
+<div class="card">
+
+<h3>Humedad del suelo</h3>
+<p id="soil">--%</p>
+
+</div>
+
+<div class="card">
+
+<h3>Temperatura ambiente</h3>
+<p id="temp">--°C</p>
+
+</div>
+
+<div class="card">
+
+<h3>Alertas activas</h3>
+<p>0</p>
+
+</div>
+
+</div>
+
+
+<!-- PANEL INFERIOR -->
+
+<div class="panel">
+
+<div class="riego">
+
+<h3>Riegos de hoy</h3>
+
+<p>06:32 — Riego automático</p>
+<p>12:15 — Riego manual</p>
+
+</div>
+
+<div class="camera">
+
+<h3>Cámara — Vista rápida</h3>
+
+<img src="img/bonsai.jpg">
+
+</div>
+
+</div>
+
+</div>
+
+</div>
+
+<script src="js/app.js"></script>
 
 </body>
 
