@@ -175,3 +175,51 @@ padding:4px 10px;
 border-radius:20px;
 font-size:12px;
 }
+.grid{
+display:grid;
+grid-template-columns:1fr 1fr;
+gap:20px;
+margin-top:20px;
+}
+
+.card{
+background:white;
+padding:25px;
+border-radius:14px;
+box-shadow:0 3px 10px rgba(0,0,0,0.05);
+}
+
+.evento{
+display:flex;
+justify-content:space-between;
+padding:10px 0;
+border-bottom:1px solid #eee;
+}
+
+.tag{
+padding:4px 12px;
+border-radius:20px;
+font-size:12px;
+background:#eee;
+}
+
+.pendiente{
+background:#f1f1f1;
+}
+
+.atendido{
+background:#e8f6ea;
+color:#2e7d32;
+}
+
+.camara-box{
+margin-top:10px;
+border:2px dashed #cfe3d4;
+padding:15px;
+border-radius:12px;
+}
+
+.camara-box img{
+width:100%;
+border-radius:12px;
+}

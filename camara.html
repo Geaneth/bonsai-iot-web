@@ -1,0 +1,125 @@
+<!DOCTYPE html>
+<html lang="es">
+
+<head>
+<meta charset="UTF-8">
+<title>Movimiento / Cámara</title>
+
+<link rel="stylesheet" href="dashboard/dashboard.css">
+
+</head>
+
+<body>
+
+<div class="layout">
+
+<!-- SIDEBAR -->
+
+<div class="sidebar">
+
+<h2>🌱 Bonsái Monitor</h2>
+
+<ul>
+
+<li><a href="dashboard.html">Panel principal</a></li>
+<li><a href="telemetria.html">Telemetría</a></li>
+<li><a href="riego.html">Riego</a></li>
+<li class="active"><a href="camara.html">Movimiento/Cámara</a></li>
+<li><a href="#">Registro histórico</a></li>
+<li><a href="#">Visualización histórica</a></li>
+<li><a href="#">Parámetros</a></li>
+<li><a href="#">Alertas</a></li>
+<li><a href="#">Reportes</a></li>
+
+</ul>
+
+</div>
+
+
+<!-- CONTENIDO -->
+
+<div class="main">
+
+<!-- TOPBAR -->
+
+<div class="topbar">
+
+<input placeholder="🔎 Buscar dispositivo, alerta o reporte...">
+
+<button onclick="actualizar()">Refrescar datos</button>
+
+</div>
+
+
+<!-- GRID -->
+
+<div class="grid">
+
+
+<!-- DETECCION -->
+
+<div class="card">
+
+<h2>Detección de movimiento (PIR)</h2>
+
+<div class="evento">
+
+<span>12/3/2026, 1:36:03 a. m. — Movimiento</span>
+<span class="tag pendiente">Pendiente</span>
+
+</div>
+
+<div class="evento">
+
+<span>12/3/2026, 1:36:00 a. m. — Movimiento</span>
+<span class="tag pendiente">Pendiente</span>
+
+</div>
+
+<div class="evento">
+
+<span>2025-10-27 05:03 — Movimiento</span>
+<span class="tag atendido">Atendido</span>
+
+</div>
+
+<button onclick="simularMovimiento()">Simular evento</button>
+
+</div>
+
+
+
+<!-- EVIDENCIA -->
+
+<div class="card">
+
+<h2>Evidencia visual</h2>
+
+<div class="camara-box">
+
+<img src="img/camara.jpg">
+
+</div>
+
+</div>
+
+
+</div>
+
+</div>
+
+</div>
+
+<script>
+
+function simularMovimiento(){
+
+alert("Movimiento detectado (simulación)")
+
+}
+
+</script>
+
+</body>
+
+</html>
